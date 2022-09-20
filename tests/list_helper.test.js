@@ -84,11 +84,12 @@ describe("total likes", () => {
     expect(result).toBe(0);
   });
 
-  test("when list has many blogs, equals the likes of that", () => {
+  test("when list has many blogs, take the sum of the likes", () => {
     const result = listHelper.totalLikes(blogs);
     expect(result).toBe(36);
   });
 });
+  
 
 describe("favorite blog", () => {
   const testData = [
@@ -149,5 +150,7 @@ describe("favorite blog", () => {
     const result = listHelper.favoriteBlog(testData);
     expect(result).toBe(testData[2]);
   });
+
+  
 });
 
